@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="assets/jquery-ui.css">
+	<link rel="stylesheet" href="assets/swiper.min.css">
+	<link rel="stylesheet" href="assets/elemental.css">
+</head>
+<body>
+	
+	<div class="titulo">168 of 173 / AA, <span class="year"></span></div>
+	<div class="pagina"><span class="cur"></span>/<span class="tot"></span></div>
+	<div class="desc"></div>	
+	<div id="home"><a href="index.html"><img src="img/home.png" /></a></div>	
+	
+	
+	
+	<div class="swiper-container"><div class="swiper-wrapper"></div></div>
+	
+	
+	<div id="sliderwrapper">
+		<div id="ui-slider"></div>
+		<div id="initialIndicator"></div>
+	</div>
+	
+	
+	
+	<script src="assets/jquery-1.8.3.min.js"></script>
+	<script src="assets/jquery-ui.min.js"></script>
+	<script src="assets/swiper.min.js"></script>
+	<script src="assets/jquery.ui.touch.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script>
+		var paginas = 77; 
+		var inicial = 51; 
+		var codigo  = '2017_03_AA';
+		var contenido = {
+			1:  {desc: ""},
+			2:  {desc: ""},
+			3:  {desc: ""},
+			4:  {desc: ""},
+			5:  {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			6:  {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			7:  {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			8:  {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			9:  {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			10: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			11: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			12: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			13: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			14: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			15: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			16: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			17: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			18: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			19: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			20: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			21: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			22: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			23: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			24: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			25: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			26: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			27: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			28: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			29: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			30: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			31: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			32: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			33: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			34: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			35: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			36: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			37: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			38: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			39: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			40: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			41: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			42: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			43: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			44: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			45: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			46: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			47: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			48: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			49: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			50: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			51: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			52: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			53: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			54: {desc: "Energias De Portugal Office Building - Lisbon, Portugal"},
+			55: {desc: "ELEMENTAL  - Phaidon Book"},
+			56: {desc: ""},
+			57: {desc: ""},
+			58: {desc: ""},
+			59: {desc: ""},
+			60: {desc: ""},
+			61: {desc: ""},
+			62: {desc: ""},
+			63: {desc: ""},
+			64: {desc: ""},
+			65: {desc: ""},
+			66: {desc: ""},
+			67: {desc: ""},
+			68: {desc: ""},
+			69: {desc: ""},
+			70: {desc: ""},
+			71: {desc: ""},
+			72: {desc: ""},
+			73: {desc: ""},
+			74: {desc: ""},
+			75: {desc: ""},
+			76: {desc: ""},
+			77: {desc: ""}
+		}
+	</script>
+	<script src="assets/elemental.js"></script>
+</body>
+</html>

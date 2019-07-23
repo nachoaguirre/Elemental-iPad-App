@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="assets/jquery-ui.css">
+	<link rel="stylesheet" href="assets/swiper.min.css">
+	<link rel="stylesheet" href="assets/elemental.css">
+</head>
+<body>
+	
+	<div class="titulo">112 of 173 / AA, <span class="year"></span></div>
+	<div class="pagina"><span class="cur"></span>/<span class="tot"></span></div>
+	<div class="desc"></div>	
+	<div id="home"><a href="index.html"><img src="img/home.png" /></a></div>	
+	
+	
+	
+	<div class="swiper-container"><div class="swiper-wrapper"></div></div>
+	
+	
+	<div id="sliderwrapper">
+		<div id="ui-slider"></div>
+		<div id="initialIndicator"></div>
+	</div>
+	
+	
+	
+	<script src="assets/jquery-1.8.3.min.js"></script>
+	<script src="assets/jquery-ui.min.js"></script>
+	<script src="assets/swiper.min.js"></script>
+	<script src="assets/jquery.ui.touch.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script>
+		var paginas = 93; 
+		var inicial = 77; 
+		var codigo  = '2003_02_AA';
+		var contenido = {
+			1:  {desc: ""},
+			2:  {desc: ""},
+			3:  {desc: ""},
+			4:  {desc: ""},
+			5:  {desc: ""},
+			6:  {desc: ""},
+			7:  {desc: ""},
+			8:  {desc: "CITEDUC - Version 1 - Santiago, Chile"},
+			9:  {desc: ""},
+			10: {desc: "CITEDUC - Version 1 - Santiago, Chile"},
+			11: {desc: "CITEDUC - Version 1 - Santiago, Chile"},
+			12: {desc: ""},
+			13: {desc: "CITEDUC - Version 1 - Santiago, Chile"},
+			14: {desc: "CITEDUC - Version 1 - Santiago, Chile"},
+			15: {desc: ""},
+			16: {desc: "CITEDUC - Version 1 - Santiago, Chile"},
+			17: {desc: ""},
+			18: {desc: ""},
+			19: {desc: ""},
+			20: {desc: ""},
+			21: {desc: ""},
+			22: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			23: {desc: ""},
+			24: {desc: ""},
+			25: {desc: ""},
+			26: {desc: "Pirehueico House - Panguipulli, Chile"},
+			27: {desc: "Pirehueico House - Panguipulli, Chile"},
+			28: {desc: "Pirehueico House - Panguipulli, Chile"},
+			29: {desc: "Pirehueico House - Panguipulli, Chile"},
+			30: {desc: "Pirehueico House - Panguipulli, Chile"},
+			31: {desc: "Pirehueico House - Panguipulli, Chile"},
+			32: {desc: "Pirehueico House - Panguipulli, Chile"},
+			33: {desc: "Pirehueico House - Panguipulli, Chile"},
+			34: {desc: "Pirehueico House - Panguipulli, Chile"},
+			35: {desc: "Pirehueico House - Panguipulli, Chile"},
+			36: {desc: "Pirehueico House - Panguipulli, Chile"},
+			37: {desc: "Pirehueico House - Panguipulli, Chile"},
+			38: {desc: "Pirehueico House - Panguipulli, Chile"},
+			39: {desc: "Pirehueico House - Panguipulli, Chile"},
+			40: {desc: "Pirehueico House - Panguipulli, Chile"},
+			41: {desc: "Pirehueico House - Panguipulli, Chile"},
+			42: {desc: "Pirehueico House - Panguipulli, Chile"},
+			43: {desc: "Pirehueico House - Panguipulli, Chile"},
+			44: {desc: "Pirehueico House - Panguipulli, Chile"},
+			45: {desc: "Pirehueico House - Panguipulli, Chile"},
+			46: {desc: "Pirehueico House - Panguipulli, Chile"},
+			47: {desc: "Pirehueico House - Panguipulli, Chile"},
+			48: {desc: "Pirehueico House - Panguipulli, Chile"},
+			49: {desc: "Pirehueico House - Panguipulli, Chile"},
+			50: {desc: "Pirehueico House - Panguipulli, Chile"},
+			51: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			52: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			53: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			54: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			55: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			56: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			57: {desc: "Pirehueico House - Panguipulli, Chile"},
+			58: {desc: "Pirehueico House - Panguipulli, Chile"},
+			59: {desc: "Pirehueico House - Panguipulli, Chile"},
+			60: {desc: "Pirehueico House - Panguipulli, Chile"},
+			61: {desc: "Pirehueico House - Panguipulli, Chile"},
+			62: {desc: "Pirehueico House - Panguipulli, Chile"},
+			63: {desc: ""},
+			64: {desc: ""},
+			65: {desc: ""},
+			66: {desc: "Pirehueico House - Panguipulli, Chile"},
+			67: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			68: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			69: {desc: ""},
+			70: {desc: ""},
+			71: {desc: ""},
+			72: {desc: "Architecture School - Santiago, Chile"},
+			73: {desc: "Architecture School - Santiago, Chile"},
+			74: {desc: ""},
+			75: {desc: ""},
+			76: {desc: "Architecture School - Santiago, Chile"},
+			77: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			78: {desc: ""},
+			79: {desc: ""},
+			80: {desc: ""},
+			81: {desc: ""},
+			82: {desc: ""},
+			83: {desc: ""},
+			84: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			85: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			86: {desc: "CITEDUC - Siamese Towers - Santiago, Chile"},
+			87: {desc: ""},
+			88: {desc: ""},
+			89: {desc: ""},
+			90: {desc: "Architecture School - Santiago, Chile"},
+			91: {desc: ""},
+			92: {desc: ""},
+			93: {desc: ""}
+		}
+	</script>
+	<script src="assets/elemental.js"></script>
+</body>
+</html>

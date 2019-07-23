@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="assets/jquery-ui.css">
+	<link rel="stylesheet" href="assets/swiper.min.css">
+	<link rel="stylesheet" href="assets/elemental.css">
+</head>
+<body>
+	
+	<div class="titulo">166 of 173 / AA, <span class="year"></span></div>
+	<div class="pagina"><span class="cur"></span>/<span class="tot"></span></div>
+	<div class="desc"></div>	
+	<div id="home"><a href="index.html"><img src="img/home.png" /></a></div>	
+	
+	
+	
+	<div class="swiper-container"><div class="swiper-wrapper"></div></div>
+	
+	
+	<div id="sliderwrapper">
+		<div id="ui-slider"></div>
+		<div id="initialIndicator"></div>
+	</div>
+	
+	
+	
+	<script src="assets/jquery-1.8.3.min.js"></script>
+	<script src="assets/jquery-ui.min.js"></script>
+	<script src="assets/swiper.min.js"></script>
+	<script src="assets/jquery.ui.touch.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script>
+		var paginas = 78; 
+		var inicial = 28; 
+		var codigo  = '2017_01_AA';
+		var contenido = {
+			1:  {desc: ""},
+			2:  {desc: ""},
+			3:  {desc: ""},
+			4:  {desc: ""},
+			5:  {desc: ""},
+			6:  {desc: ""},
+			7:  {desc: ""},
+			8:  {desc: ""},
+			9:  {desc: ""},
+			10: {desc: ""},
+			11: {desc: ""},
+			12: {desc: ""},
+			13: {desc: "Artemide - Huara - O - Metric - Lamps"},
+			14: {desc: ""},
+			15: {desc: ""},
+			16: {desc: ""},
+			17: {desc: ""},
+			18: {desc: ""},
+			19: {desc: ""},
+			20: {desc: ""},
+			21: {desc: ""},
+			22: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			23: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			24: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			25: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			26: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			27: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			28: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			29: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			30: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			31: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			32: {desc: ""},
+			33: {desc: ""},
+			34: {desc: ""},
+			35: {desc: ""},
+			36: {desc: ""},
+			37: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			38: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			39: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			40: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			41: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			42: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			43: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			44: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			45: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			46: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			47: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			48: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			49: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			50: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			51: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			52: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			53: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			54: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			55: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			56: {desc: "Artmill Complex - Competition, Stage 3 - Doha, Qatar"},
+			57: {desc: ""},
+			58: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			59: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			60: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			61: {desc: "MIT Dorm - Concept Design - Proposal - Cambridge, Usa"},
+			62: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			63: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			64: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			65: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			66: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			67: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			68: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			69: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			70: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			71: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			72: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			73: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			74: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			75: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			76: {desc: "Artmill Complex - Competition, Stage 4 - Doha, Qatar"},
+			77: {desc: ""},
+			78: {desc: ""}
+		}
+	</script>
+	<script src="assets/elemental.js"></script>
+</body>
+</html>

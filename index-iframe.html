@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=n">
+	<style>
+		body { background: #3C3C3C; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center; }
+		.frame { width:100%; position: fixed; text-align: center; background: #3c3c3c; z-index:9999; color:#fff; }
+		.top { height:100px; top:0; box-shadow:0px 4px 8px 0px #000; line-height: 120px; }
+		.bottom { height: 100px; bottom:0; box-shadow:0px -4px 8px 0px #000; line-height:100px; }
+	</style>
+</head>
+<body>
+	
+<div class="frame top" style=""><img src="img/logo.png" /></div>	
+
+<iframe class="iframe" src="iframe.html" sandbox="allow-same-origin	allow-scripts allow-top-navigation" frameborder="0" width="100%" height="400" style="width:100%; height: 400px; position: absolute; top:125px; left:0;"></iframe>
+
+<div class="frame bottom" >+</div>	
+		
+
+
+
+	
+	<script type="text/javascript" src="cordova.js"></script>
+		<script src="assets/jquery-1.8.3.min.js"></script>
+		
+	<script>
+		$(document).ready(function(){
+			var top = $(".top").height();
+			var top2 = $(".top").innerHeight();
+			var bottom = $(".bottom").height();
+			var bottom2 = $(".bottom").innerHeight();
+			var iframe = $(".iframe").height();
+			var iframe2 = $(".iframe").innerHeight();
+			//alert("TOP: " + top + " ("+top2+"). BOTTOM: "+ bottom + " ("+bottom2+"). IFRAME: " + iframe + "("+ iframe2 +")" );
+			//alert( $(".iframe").attr("src") );
+			console.log("test desde index");
+		});
+	</script>
+
+</body>
+</html>

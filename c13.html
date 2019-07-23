@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="assets/jquery-ui.css">
+	<link rel="stylesheet" href="assets/swiper.min.css">
+	<link rel="stylesheet" href="assets/elemental.css">
+</head>
+<body>
+	
+	<div class="titulo">104 of 173 / AA, <span class="year"></span></div>
+	<div class="pagina"><span class="cur"></span>/<span class="tot"></span></div>
+	<div class="desc"></div>	
+	<div id="home"><a href="index.html"><img src="img/home.png" /></a></div>	
+	
+	
+	
+	<div class="swiper-container"><div class="swiper-wrapper"></div></div>
+	
+	
+	<div id="sliderwrapper">
+		<div id="ui-slider"></div>
+		<div id="initialIndicator"></div>
+	</div>
+	
+	
+	
+	<script src="assets/jquery-1.8.3.min.js"></script>
+	<script src="assets/jquery-ui.min.js"></script>
+	<script src="assets/swiper.min.js"></script>
+	<script src="assets/jquery.ui.touch.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script>
+		var paginas = 110; 
+		var inicial = 57; 
+		var codigo  = '2001_01_AA';
+		var contenido = {
+			1:  {desc: ""},
+			2:  {desc: ""},
+			3:  {desc: "Montessori School - Santiago, Chile"},
+			4:  {desc: "Montessori School - Santiago, Chile"},
+			5:  {desc: "Montessori School - Santiago, Chile"},
+			6:  {desc: "Montessori School - Santiago, Chile"},
+			7:  {desc: "Montessori School - Santiago, Chile"},
+			8:  {desc: "Montessori School - Santiago, Chile"},
+			9:  {desc: ""},
+			10: {desc: ""},
+			11: {desc: ""},
+			12: {desc: ""},
+			13: {desc: "Garib House - Santiago, Chile"},
+			14: {desc: "Garib House - Santiago, Chile"},
+			15: {desc: "Garib House - Santiago, Chile"},
+			16: {desc: "Garib House - Santiago, Chile"},
+			17: {desc: "Garib House - Santiago, Chile"},
+			18: {desc: "Garib House - Santiago, Chile"},
+			19: {desc: "Garib House - Santiago, Chile"},
+			20: {desc: "Garib House - Santiago, Chile"},
+			21: {desc: "Montessori School - Santiago, Chile"},
+			22: {desc: "Montessori School - Santiago, Chile"},
+			23: {desc: "Montessori School - Santiago, Chile"},
+			24: {desc: "Montessori School - Santiago, Chile"},
+			25: {desc: "Montessori School - Santiago, Chile"},
+			26: {desc: ""},
+			27: {desc: ""},
+			28: {desc: ""},
+			29: {desc: ""},
+			30: {desc: "Montessori School - Santiago, Chile"},
+			31: {desc: ""},
+			32: {desc: ""},
+			33: {desc: ""},
+			34: {desc: "Garib House - Santiago, Chile"},
+			35: {desc: "Garib House - Santiago, Chile"},
+			36: {desc: "Garib House - Santiago, Chile"},
+			37: {desc: "Garib House - Santiago, Chile"},
+			38: {desc: "Garib House - Santiago, Chile"},
+			39: {desc: "Garib House - Santiago, Chile"},
+			40: {desc: ""},
+			41: {desc: ""},
+			42: {desc: "Garib House - Santiago, Chile"},
+			43: {desc: "Garib House - Santiago, Chile"},
+			44: {desc: "Garib House - Santiago, Chile"},
+			45: {desc: "Montessori School - Santiago, Chile"},
+			46: {desc: ""},
+			47: {desc: ""},
+			48: {desc: ""},
+			49: {desc: ""},
+			50: {desc: ""},
+			51: {desc: ""},
+			52: {desc: "Garib House - Santiago, Chile"},
+			53: {desc: ""},
+			54: {desc: ""},
+			55: {desc: "Garib House - Santiago, Chile"},
+			56: {desc: "Garib House - Santiago, Chile"},
+			57: {desc: "Garib House - Santiago, Chile"},
+			58: {desc: "Garib House - Santiago, Chile"},
+			59: {desc: "Garib House - Santiago, Chile"},
+			60: {desc: "Garib House - Santiago, Chile"},
+			61: {desc: "Garib House - Santiago, Chile"},
+			62: {desc: "Garib House - Santiago, Chile"},
+			63: {desc: "Garib House - Santiago, Chile"},
+			64: {desc: "Garib House - Santiago, Chile"},
+			65: {desc: "Garib House - Santiago, Chile"},
+			66: {desc: "Garib House - Santiago, Chile"},
+			67: {desc: ""},
+			68: {desc: ""},
+			69: {desc: ""},
+			70: {desc: ""},
+			71: {desc: "Montessori School - Santiago, Chile"},
+			72: {desc: ""},
+			73: {desc: ""},
+			74: {desc: "Montessori School - Santiago, Chile"},
+			75: {desc: ""},
+			76: {desc: ""},
+			77: {desc: ""},
+			78: {desc: ""},
+			79: {desc: ""},
+			80: {desc: ""},
+			81: {desc: ""},
+			82: {desc: ""},
+			83: {desc: ""},
+			84: {desc: ""},
+			85: {desc: ""},
+			86: {desc: ""},
+			87: {desc: ""},
+			88: {desc: ""},
+			89: {desc: ""},
+			90: {desc: "UC Medical School - Santiago, Chile"},
+			91: {desc: "UC Medical School - Santiago, Chile"},
+			92: {desc: "UC Medical School - Santiago, Chile"},
+			93: {desc: "UC Medical School - Santiago, Chile"},
+			94: {desc: "UC Medical School - Santiago, Chile"},
+			95: {desc: "UC Medical School - Santiago, Chile"},
+			96: {desc: "UC Medical School - Santiago, Chile"},
+			97: {desc: ""},
+			98: {desc: ""},
+			99: {desc: ""},
+			100: {desc: ""},
+			101: {desc: ""},
+			102: {desc: ""},
+			103: {desc: ""},
+			104: {desc: ""},
+			105: {desc: "UC Medical School - Santiago, Chile"},
+			106: {desc: "UC Medical School - Santiago, Chile"},
+			107: {desc: "UC Medical School - Santiago, Chile"},
+			108: {desc: ""},
+			109: {desc: ""},
+			110: {desc: ""}
+		}
+	</script>
+	<script src="assets/elemental.js"></script>
+</body>
+</html>

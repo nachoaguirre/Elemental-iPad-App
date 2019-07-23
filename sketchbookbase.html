@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/jquery-ui.css">
+	<link rel="stylesheet" href="assets/swiper.min.css">
+	<link rel="stylesheet" href="assets/elemental.css">
+</head>
+<body>
+	
+	<div class="titulo"></div>	
+	<div class="pagina"><span class="cur"></span>/<span class="tot"></span></div>
+	<div class="desc"></div>	
+	<div id="home"><a href="index.html"><img src="img/home.png" height="50px" /></a></div>	
+	
+	
+	
+	<div class="swiper-container"><div class="swiper-wrapper"></div></div>
+	
+	
+	<div id="sliderwrapper">
+		<div id="ui-slider"></div>
+		<div id="initialIndicator"></div>
+	</div>
+	
+	
+	
+	<script src="assets/jquery-1.8.3.min.js"></script>
+	<script src="assets/jquery-ui.min.js"></script>
+	<script src="assets/swiper.min.js"></script>
+	<script src="assets/jquery.ui.touch.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script>
+		var paginas = 85; 
+		var inicial = 20; 
+		var titulo  = 'AA, 1991';
+		var codigo  = '2008_02_AA';
+		var contenido = {
+			1:  {desc: "Descripción 1"},
+			2:  {desc: ""},
+			3:  {desc: "Descripción 3"},
+			4:  {desc: ""},
+			5:  {desc: "Descripción 5"},
+			6:  {desc: ""},
+			7:  {desc: "Descripción 7"},
+			8:  {desc: "Descripción 8"},
+			9:  {desc: "Descripción 9"},
+			10: {desc: ""},
+			11: {desc: "Descripción 11"},
+			12: {desc: ""},
+			13: {desc: "Descripción 13"},
+			14: {desc: ""},
+			15: {desc: ""},
+			16: {desc: ""},
+			17: {desc: ""},
+			18: {desc: ""},
+			19: {desc: ""},
+			20: {desc: "Descripción 20"},
+			21: {desc: ""},
+			22: {desc: ""},
+			23: {desc: ""},
+			24: {desc: ""},
+			25: {desc: ""},
+			26: {desc: ""},
+			27: {desc: "Descripción 27"},
+			28: {desc: "Descripción 28"},
+			29: {desc: "Descripción 29"},
+			30: {desc: "Descripción 30"},
+			31: {desc: "Descripción 31"},
+			32: {desc: "Descripción 32"},
+			33: {desc: ""},
+			34: {desc: "Descripción 34"},
+			35: {desc: "Descripción 35"},
+			36: {desc: "Descripción 36"},
+			37: {desc: "Descripción 37"},
+			38: {desc: "Descripción 38"},
+			39: {desc: "Descripción 39"},
+			40: {desc: "Descripción 40"},
+			41: {desc: "Descripción 41"},
+			42: {desc: ""},
+			43: {desc: "Descripción 43"},
+			44: {desc: "Descripción 44"},
+			45: {desc: "Descripción 45"},
+			46: {desc: "Descripción 46"},
+			47: {desc: "Descripción 47"},
+			48: {desc: "Descripción 48"},
+			49: {desc: "Descripción 49"},
+			50: {desc: "Descripción 50"},
+			51: {desc: "Descripción 51"},
+			52: {desc: "Descripción 52"},
+			53: {desc: "Descripción 53"},
+			54: {desc: "Descripción 54"},
+			55: {desc: "Descripción 55"},
+			56: {desc: "Descripción 56"},
+			57: {desc: "Descripción 57"},
+			58: {desc: "Descripción 58"},
+			59: {desc: "Descripción 59"},
+			60: {desc: "Descripción 60"},
+			61: {desc: "Descripción 61"},
+			62: {desc: "Descripción 62"},
+			63: {desc: "Descripción 63"},
+			64: {desc: "Descripción 64"},
+			65: {desc: "Descripción 65"},
+			66: {desc: "Descripción 66"},
+			67: {desc: "Descripción 67"},
+			68: {desc: "Descripción 68"},
+			69: {desc: "Descripción 69"},
+			70: {desc: "Descripción 70"},
+			71: {desc: "Descripción 71"},
+			72: {desc: "Descripción 72"},
+			73: {desc: "Descripción 73"},
+			74: {desc: "Descripción 74"},
+			75: {desc: "Descripción 75"},
+			76: {desc: "Descripción 76"},
+			77: {desc: "Descripción 77"},
+			78: {desc: "Descripción 78"},
+			79: {desc: "Descripción 79"},
+			80: {desc: "Descripción 80"},
+			81: {desc: "Descripción 81"},
+			82: {desc: "Descripción 82"},
+			83: {desc: "Descripción 83"},
+			84: {desc: "Descripción 84"},
+			85: {desc: "Descripción 85"},
+			86: {desc: "Descripción 86"},
+			87: {desc: "Descripción 87"},
+			88: {desc: "Descripción 88"},
+			89: {desc: "Descripción 89"},
+			90: {desc: "Descripción 90"},
+			91: {desc: "Descripción 91"},
+			92: {desc: "Descripción 92"},
+			93: {desc: "Descripción 93"},
+			94: {desc: "Descripción 94"},
+			95: {desc: "Descripción 95"},
+			96: {desc: "Descripción 96"},
+			97: {desc: "Descripción 97"},
+			98: {desc: "Descripción 98"},
+			99: {desc: "Descripción 99"},
+			100: {desc: "Descripción 100"},
+			101: {desc: "Descripción 101"},
+			102: {desc: "Descripción 102"},
+			103: {desc: "Descripción 103"},
+			104: {desc: "Descripción 104"},
+			105: {desc: "Descripción 105"},
+			106: {desc: "Descripción 106"},
+			107: {desc: "Descripción 107"},
+			108: {desc: "Descripción 108"},
+			109: {desc: "Descripción 109"},
+			110: {desc: "Descripción 110"},
+			111: {desc: "Descripción 111"},
+			112: {desc: "Descripción 112"},
+			113: {desc: "Descripción 113"},
+			114: {desc: "Descripción 114"},
+			115: {desc: "Descripción 115"},
+			116: {desc: "Descripción 116"},
+			117: {desc: "Descripción 117"},
+			118: {desc: "Descripción 118"},
+			119: {desc: "Descripción 119"},
+			120: {desc: "Descripción 120"},
+			121: {desc: "Descripción 121"},
+			122: {desc: "Descripción 122"},
+			123: {desc: "Descripción 123"},
+			124: {desc: "Descripción 124"},
+			125: {desc: "Descripción 125"},
+			126: {desc: "Descripción 126"},
+			127: {desc: "Descripción 127"},
+			128: {desc: "Descripción 128"},
+			129: {desc: "Descripción 129"},
+			130: {desc: "Descripción 130"},
+			131: {desc: "Descripción 131"},
+			132: {desc: "Descripción 132"},
+			133: {desc: "Descripción 133"},
+			134: {desc: "Descripción 134"},
+			135: {desc: "Descripción 135"},
+			136: {desc: "Descripción 136"},
+			137: {desc: "Descripción 137"},
+			138: {desc: "Descripción 138"},
+			139: {desc: "Descripción 139"},
+			140: {desc: "Descripción 140"},
+			141: {desc: "Descripción 141"},
+			142: {desc: "Descripción 142"},
+			143: {desc: "Descripción 143"},
+			144: {desc: "Descripción 144"},
+			145: {desc: "Descripción 145"},
+			146: {desc: "Descripción 146"},
+			147: {desc: "Descripción 147"},
+			148: {desc: "Descripción 148"},
+			149: {desc: "Descripción 149"}
+		}
+	</script>
+	<script src="assets/elemental.js"></script>
+</body>
+</html>

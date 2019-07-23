@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="assets/jquery-ui.css">
+	<link rel="stylesheet" href="assets/swiper.min.css">
+	<link rel="stylesheet" href="assets/elemental.css">
+</head>
+<body>
+	
+	<div class="titulo">105 of 173 / AA, <span class="year"></span></div>
+	<div class="pagina"><span class="cur"></span>/<span class="tot"></span></div>
+	<div class="desc"></div>	
+	<div id="home"><a href="index.html"><img src="img/home.png" /></a></div>	
+	
+	
+	
+	<div class="swiper-container"><div class="swiper-wrapper"></div></div>
+	
+	
+	<div id="sliderwrapper">
+		<div id="ui-slider"></div>
+		<div id="initialIndicator"></div>
+	</div>
+	
+	
+	
+	<script src="assets/jquery-1.8.3.min.js"></script>
+	<script src="assets/jquery-ui.min.js"></script>
+	<script src="assets/swiper.min.js"></script>
+	<script src="assets/jquery.ui.touch.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script>
+		var paginas = 114; 
+		var inicial = 49; 
+		var codigo  = '2001_02_AA';
+		var contenido = {
+			1:  {desc: ""},
+			2:  {desc: ""},
+			3:  {desc: "UC Medical School - Santiago, Chile"},
+			4:  {desc: "UC Medical School - Santiago, Chile"},
+			5:  {desc: "UC Medical School - Santiago, Chile"},
+			6:  {desc: "UC Medical School - Santiago, Chile"},
+			7:  {desc: "UC Medical School - Santiago, Chile"},
+			8:  {desc: "UC Medical School - Santiago, Chile"},
+			9:  {desc: "UC Medical School - Santiago, Chile"},
+			10: {desc: "UC Medical School - Santiago, Chile"},
+			11: {desc: "UC Medical School - Santiago, Chile"},
+			12: {desc: "UC Medical School - Santiago, Chile"},
+			13: {desc: "UC Medical School - Santiago, Chile"},
+			14: {desc: "UC Medical School - Santiago, Chile"},
+			15: {desc: "UC Medical School - Santiago, Chile"},
+			16: {desc: "UC Medical School - Santiago, Chile"},
+			17: {desc: "UC Medical School - Santiago, Chile"},
+			18: {desc: "UC Medical School - Santiago, Chile"},
+			19: {desc: "UC Medical School - Santiago, Chile"},
+			20: {desc: "UC Medical School - Santiago, Chile"},
+			21: {desc: "UC Medical School - Santiago, Chile"},
+			22: {desc: "UC Medical School - Santiago, Chile"},
+			23: {desc: "UC Medical School - Santiago, Chile"},
+			24: {desc: "UC Medical School - Santiago, Chile"},
+			25: {desc: "UC Medical School - Santiago, Chile"},
+			26: {desc: "UC Medical School - Santiago, Chile"},
+			27: {desc: "UC Medical School - Santiago, Chile"},
+			28: {desc: "UC Medical School - Santiago, Chile"},
+			29: {desc: "UC Medical School - Santiago, Chile"},
+			30: {desc: "UC Medical School - Santiago, Chile"},
+			31: {desc: "UC Medical School - Santiago, Chile"},
+			32: {desc: "UC Medical School - Santiago, Chile"},
+			33: {desc: "UC Medical School - Santiago, Chile"},
+			34: {desc: "UC Medical School - Santiago, Chile"},
+			35: {desc: "UC Medical School - Santiago, Chile"},
+			36: {desc: "UC Medical School - Santiago, Chile"},
+			37: {desc: "UC Medical School - Santiago, Chile"},
+			38: {desc: "UC Medical School - Santiago, Chile"},
+			39: {desc: "UC Medical School - Santiago, Chile"},
+			40: {desc: "UC Medical School - Santiago, Chile"},
+			41: {desc: "UC Medical School - Santiago, Chile"},
+			42: {desc: "UC Medical School - Santiago, Chile"},
+			43: {desc: "UC Medical School - Santiago, Chile"},
+			44: {desc: "UC Medical School - Santiago, Chile"},
+			45: {desc: "UC Medical School - Santiago, Chile"},
+			46: {desc: "UC Medical School - Santiago, Chile"},
+			47: {desc: "UC Medical School - Santiago, Chile"},
+			48: {desc: "UC Medical School - Santiago, Chile"},
+			49: {desc: "UC Medical School - Santiago, Chile"},
+			50: {desc: "UC Medical School - Santiago, Chile"},
+			51: {desc: "UC Medical School - Santiago, Chile"},
+			52: {desc: "UC Medical School - Santiago, Chile"},
+			53: {desc: "UC Medical School - Santiago, Chile"},
+			54: {desc: "UC Medical School - Santiago, Chile"},
+			55: {desc: "UC Medical School - Santiago, Chile"},
+			56: {desc: "UC Medical School - Santiago, Chile"},
+			57: {desc: "UC Medical School - Santiago, Chile"},
+			58: {desc: "UC Medical School - Santiago, Chile"},
+			59: {desc: "UC Medical School - Santiago, Chile"},
+			60: {desc: "UC Medical School - Santiago, Chile"},
+			61: {desc: "UC Medical School - Santiago, Chile"},
+			62: {desc: "UC Medical School - Santiago, Chile"},
+			63: {desc: "UC Medical School - Santiago, Chile"},
+			64: {desc: "UC Medical School - Santiago, Chile"},
+			65: {desc: "UC Medical School - Santiago, Chile"},
+			66: {desc: "UC Medical School - Santiago, Chile"},
+			67: {desc: "UC Medical School - Santiago, Chile"},
+			68: {desc: "UC Medical School - Santiago, Chile"},
+			69: {desc: "UC Medical School - Santiago, Chile"},
+			70: {desc: "UC Medical School - Santiago, Chile"},
+			71: {desc: "UC Medical School - Santiago, Chile"},
+			72: {desc: "UC Medical School - Santiago, Chile"},
+			73: {desc: "UC Medical School - Santiago, Chile"},
+			74: {desc: "UC Medical School - Santiago, Chile"},
+			75: {desc: ""},
+			76: {desc: ""},
+			77: {desc: ""},
+			78: {desc: ""},
+			79: {desc: "UC Medical School - Santiago, Chile"},
+			80: {desc: "UC Medical School - Santiago, Chile"},
+			81: {desc: "UC Medical School - Santiago, Chile"},
+			82: {desc: "UC Medical School - Santiago, Chile"},
+			83: {desc: "UC Medical School - Santiago, Chile"},
+			84: {desc: "UC Medical School - Santiago, Chile"},
+			85: {desc: ""},
+			86: {desc: ""},
+			87: {desc: ""},
+			88: {desc: ""},
+			89: {desc: ""},
+			90: {desc: ""},
+			91: {desc: ""},
+			92: {desc: ""},
+			93: {desc: "UC Medical School - Santiago, Chile"},
+			94: {desc: "UC Medical School - Santiago, Chile"},
+			95: {desc: "UC Medical School - Santiago, Chile"},
+			96: {desc: "UC Medical School - Santiago, Chile"},
+			97: {desc: "UC Medical School - Santiago, Chile"},
+			98: {desc: "UC Medical School - Santiago, Chile"},
+			99: {desc: ""},
+			100: {desc: ""},
+			101: {desc: ""},
+			102: {desc: ""},
+			103: {desc: ""},
+			104: {desc: ""},
+			105: {desc: ""},
+			106: {desc: ""},
+			107: {desc: ""},
+			108: {desc: ""},
+			109: {desc: ""},
+			110: {desc: ""},
+			111: {desc: ""},
+			112: {desc: ""},
+			113: {desc: ""},
+			114: {desc: ""}
+		}
+	</script>
+	<script src="assets/elemental.js"></script>
+</body>
+</html>

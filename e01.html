@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="assets/jquery-ui.css">
+	<link rel="stylesheet" href="assets/swiper.min.css">
+	<link rel="stylesheet" href="assets/elemental.css">
+</head>
+<body>
+	
+	<div class="titulo">130 of 173 / AA, <span class="year"></span></div>
+	<div class="pagina"><span class="cur"></span>/<span class="tot"></span></div>
+	<div class="desc"></div>	
+	<div id="home"><a href="index.html"><img src="img/home.png" /></a></div>	
+	
+	
+	
+	<div class="swiper-container"><div class="swiper-wrapper"></div></div>
+	
+	
+	<div id="sliderwrapper">
+		<div id="ui-slider"></div>
+		<div id="initialIndicator"></div>
+	</div>
+	
+	
+	
+	<script src="assets/jquery-1.8.3.min.js"></script>
+	<script src="assets/jquery-ui.min.js"></script>
+	<script src="assets/swiper.min.js"></script>
+	<script src="assets/jquery.ui.touch.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script>
+		var paginas = 85; 
+		var inicial = 73; 
+		var codigo  = '2008_02_AA';
+		var contenido = {
+			1:  {desc: ""},
+			2:  {desc: ""},
+			3:  {desc: ""},
+			4:  {desc: "Ordos House -Inner Mongolia, China"},
+			5:  {desc: "Ordos House -Inner Mongolia, China"},
+			6:  {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			7:  {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			8:  {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			9:  {desc: "Barnechea Housing Project - Santiago, Chile"},
+			10: {desc: ""},
+			11: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			12: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			13: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			14: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			15: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			16: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			17: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			18: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			19: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			20: {desc: "Prefab Housing Prototype - Triennale Of Milan - Milan, Italy"},
+			21: {desc: ""},
+			22: {desc: ""},
+			23: {desc: ""},
+			24: {desc: ""},
+			25: {desc: ""},
+			26: {desc: ""},
+			27: {desc: ""},
+			28: {desc: ""},
+			29: {desc: ""},
+			30: {desc: ""},
+			31: {desc: ""},
+			32: {desc: ""},
+			33: {desc: "Ordos House -Inner Mongolia, China"},
+			34: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			35: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			36: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			37: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			38: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			39: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			40: {desc: "Vitra Children's Workshop - Weil Am Rhein, Germany"},
+			41: {desc: ""},
+			42: {desc: ""},
+			43: {desc: ""},
+			44: {desc: "Ordos House -Inner Mongolia, China"},
+			45: {desc: "Ordos House -Inner Mongolia, China"},
+			46: {desc: "Ordos House -Inner Mongolia, China"},
+			47: {desc: "Ordos House -Inner Mongolia, China"},
+			48: {desc: "Ordos House -Inner Mongolia, China"},
+			49: {desc: "Ordos House -Inner Mongolia, China"},
+			50: {desc: "Ordos House -Inner Mongolia, China"},
+			51: {desc: "Ordos House -Inner Mongolia, China"},
+			52: {desc: "Ordos House -Inner Mongolia, China"},
+			53: {desc: "Ordos House -Inner Mongolia, China"},
+			54: {desc: "Ordos House -Inner Mongolia, China"},
+			55: {desc: "Ordos House -Inner Mongolia, China"},
+			56: {desc: "Ordos House -Inner Mongolia, China"},
+			57: {desc: "Ordos House -Inner Mongolia, China"},
+			58: {desc: "Ordos House -Inner Mongolia, China"},
+			59: {desc: "Ordos House -Inner Mongolia, China"},
+			60: {desc: "Ordos House -Inner Mongolia, China"},
+			61: {desc: "Ordos House -Inner Mongolia, China"},
+			62: {desc: "Ordos House -Inner Mongolia, China"},
+			63: {desc: "Ordos House -Inner Mongolia, China"},
+			64: {desc: "Ordos House -Inner Mongolia, China"},
+			65: {desc: "Ordos House -Inner Mongolia, China"},
+			66: {desc: "Ordos House -Inner Mongolia, China"},
+			67: {desc: "Ordos House -Inner Mongolia, China"},
+			68: {desc: "Ordos House -Inner Mongolia, China"},
+			69: {desc: "Ordos House -Inner Mongolia, China"},
+			70: {desc: "Ordos House -Inner Mongolia, China"},
+			71: {desc: "Ordos House -Inner Mongolia, China"},
+			72: {desc: "Ordos House -Inner Mongolia, China"},
+			73: {desc: "Ordos House -Inner Mongolia, China"},
+			74: {desc: "Ordos House -Inner Mongolia, China"},
+			75: {desc: "Ordos House -Inner Mongolia, China"},
+			76: {desc: "Ordos House -Inner Mongolia, China"},
+			77: {desc: "Ordos House -Inner Mongolia, China"},
+			78: {desc: "Ordos House -Inner Mongolia, China"},
+			79: {desc: "Ordos House -Inner Mongolia, China"},
+			80: {desc: "Ordos House -Inner Mongolia, China"},
+			81: {desc: "Ordos House -Inner Mongolia, China"},
+			82: {desc: "Ordos House -Inner Mongolia, China"},
+			83: {desc: "Ordos House -Inner Mongolia, China"},
+			84: {desc: "Ordos House -Inner Mongolia, China"},
+			85: {desc: ""}
+		}
+	</script>
+	<script src="assets/elemental.js"></script>
+</body>
+</html>
